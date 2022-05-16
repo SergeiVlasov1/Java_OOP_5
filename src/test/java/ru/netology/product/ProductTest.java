@@ -21,20 +21,7 @@ public class ProductTest {
     private Smartphone product9 = new Smartphone(9, "Xiaomi Redmi 9T NFC 4/64 ГБ RU, синие сумерки", 17000, "Xiaomi");
     private Smartphone product10 = new Smartphone(10, "Apple iPhone 12 64 ГБ, фиолетовый", 55000, "Apple");
 
-    @BeforeEach
-    public void setUp() {
-        manager.add(firstBook);
-        manager.add(secondBook);
-        manager.add(thirdBook);
-        manager.add(fourthBook);
-        manager.add(fifthBook);
-        manager.add(firstSmartphone);
-        manager.add(secondSmartphone);
-        manager.add(thirdSmartphone);
-        manager.add(fourthSmartphone);
-        manager.add(fifthSmartphone);
-    }
-
+    
     @Test
     public void shouldSearchBookByNameIfExists() {
         String name = "Тестирование программного обеспечения. Базовый курс";
@@ -56,7 +43,7 @@ public class ProductTest {
     @Test
     public void shouldNotSearchBookByAuthorIfNotExists() {
         String author = "Джеральд М. Вайнберг";
-        assertFalse(product4.matches(author);
+        assertFalse(product4.matches(author));
     }
 
     @Test
