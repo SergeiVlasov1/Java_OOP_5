@@ -95,7 +95,7 @@ class ProductManagerTest {
     }
 
     @Test
-    public void shouldNotSearchSmartphoneByManufacturerIfExists() {
+    public void shouldNotSearchSmartphoneByManufacturerIfNotExists() {
         String manufacturer = "Honor";
         Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(manufacturer);
