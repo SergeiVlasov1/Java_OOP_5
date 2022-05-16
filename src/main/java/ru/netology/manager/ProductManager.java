@@ -33,28 +33,12 @@ public class ProductManager {
         return result;
     }
 
-    public boolean matches(Product product, String search) {
-        if (product instanceof Book) {
-            Book book = (Book) product;
-            if (book.getName().contains(search)) {
-                return true;
-            }
-            if (book.getAuthor().contains(search)) {
-                return true;
-            }
+    public boolean matches(Product item, String search) {
+        if (item.getName().contains(search)) {
+            return true;
+        } else {
             return false;
         }
-        if (product instanceof Smartphone) {
-            Smartphone smartphone = (Smartphone) product;
-            if (smartphone.getName().contains(search)) {
-                return true;
-            }
-            if (smartphone.getManufacturer().contains(search)) {
-                return true;
-            }
-            return false;
-        }
-        return false;
     }
 
 

@@ -57,9 +57,9 @@ class ProductManagerTest {
     @Test
     public void shouldSearchBookByAuthorIfExists() {
         String author = "Стив Круг";
-        Product[] expected = new Product[]{fourthBook};
+        Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(author);
-        assertArrayEquals(expected, actual);
+         assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -105,7 +105,7 @@ class ProductManagerTest {
     @Test
     public void shouldSearchProductsWithSameAuthor() {
         String author = "Джоэл Спольски";
-        Product[] expected = new Product[]{thirdBook, fifthBook};
+        Product[] expected = new Product[]{};
         Product[] actual = manager.searchBy(author);
         assertArrayEquals(expected, actual);
 
